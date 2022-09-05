@@ -3,9 +3,10 @@
 <main class="p-publish">
     <div class="c-breadcrumb">
         <div class="l-container">
-            <?php dimox_breadcrumbs();
-                    $paged = ( get_query_var("paged") ? get_query_var("paged") : 1);
-              ?>
+            <?php 
+                dimox_breadcrumbs();
+                $paged = ( get_query_var("paged") ? get_query_var("paged") : 1);
+            ?>
         </div>
     </div>
 

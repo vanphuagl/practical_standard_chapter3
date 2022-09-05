@@ -35,7 +35,7 @@
             </div>
             <div class="l-btn l-btn--2btn">
                 <div class="c-btn">
-                    <a href="<?php echo home_url() ?>/service">ひかり税理士法人のサービス一覧を見る</a>
+                    <a href="<?php echo home_url() ?>/services">ひかり税理士法人のサービス一覧を見る</a>
                 </div>
                 <div class="c-btn">
                     <a href="<?php echo home_url() ?>/cases">ひかり税理士法人の成功事例を見る</a>

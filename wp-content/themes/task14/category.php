@@ -12,7 +12,7 @@
 			<?php  
                 $category = single_term_title("", false);
                 $catid = get_cat_ID( $category );
-                $paged= (get_query_var('paged')) ? get_query_var('paged') : 1;
+                $paged= (get_query_var('paged')) ? absint(get_query_var('paged')) : 1;
             ?>
         </div>
 
@@ -20,7 +20,7 @@
             <div class="l-container">
                 <ul class="c-listpost">
 
-                    <?php query_posts( "cat=$catid&paged=$paged&posts_per_page=5,post_status=publish&post_type=post"); ?>
+                    <?php query_posts("cat=$catid&post_type=post&posts_per_page=5&post_status=publish&paged=$paged"); ?>
                     <?php while (have_posts()) : the_post(); ?>
                         <?php $categories = get_the_category(); ?>
                         <?php foreach ($categories as $category): ?>
