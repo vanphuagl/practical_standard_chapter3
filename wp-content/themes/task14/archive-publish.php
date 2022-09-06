@@ -25,10 +25,10 @@
                     <div class="c-gridpost__thumb">
                         <?php the_post_thumbnail(); ?>
                     </div>
-                    
+
                     <div class="c-gridpost__info">
                         <p class="datepost"><?php echo get_the_date('Y年m月d日'); ?></p>
-                        <h3><?php the_title();?></h3>
+                        <h3><?php the_title(); ?></h3>
                         <p class="price">¥<?php the_field('price'); ?> (税別)</p>
                         <a href="<?php the_permalink(); ?>" class="c-btnview">詳しく見る</a>
                     </div>
@@ -43,4 +43,5 @@
         </div>
     </div>
 </main>
+
 <?php get_footer(); ?>

@@ -10,7 +10,7 @@
     <div class="p-news__content">
         <div class="l-container">
             <div class="feature_img">
-                <img src="<?php bloginfo('template_directory') ?>/assets/img/img_news.png" alt="">
+                <img src="<?php bloginfo('template_directory'); ?>/assets/img/img_news.png" alt="">
             </div>
 
             <div class="c-ttlpostpage">
@@ -20,10 +20,10 @@
 
                 <?php $categories = get_the_category(); ?>
                 <?php foreach ($categories as $category): ?>
-                    <span class="cat">
-                        <i class="c-dotcat" style="background-color: <?php echo $category->description  ?>"></i>
-                        <?php echo '<a href="' . get_category_link($category->term_id) . '">' . $category->name . '</a>'; ?>
-                    </span>
+                <span class="cat">
+                    <i class="c-dotcat" style="background-color: <?php echo $category->description ?>"></i>
+                    <?php echo '<a href="' . get_category_link($category->term_id) . '">' . $category->name . '</a>'; ?>
+                </span>
                 <?php endforeach; ?>
             </div>
 
@@ -33,7 +33,7 @@
 
             <div class="l-btn">
                 <div class="c-btn c-btn--small2">
-                    <a href="<?php echo home_url() ?>/news">ニュース一覧を見る</a>
+                    <a href="<?php echo home_url(); ?>/news">ニュース一覧を見る</a>
                 </div>
             </div>
         </div>

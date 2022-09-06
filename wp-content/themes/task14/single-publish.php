@@ -3,7 +3,7 @@
 <main class="p-publish">
     <div class="c-breadcrumb">
         <div class="l-container">
-            <?php dimox_breadcrumbs();?>
+            <?php dimox_breadcrumbs(); ?>
         </div>
     </div>
 
@@ -34,7 +34,7 @@
 
         <div class="l-btn">
             <div class="c-btn c-btn--small2">
-                <a href="<?php echo home_url() ?>/publish">出版物一覧へ</a>
+                <a href="<?php echo home_url(); ?>/publish">出版物一覧へ</a>
             </div>
         </div>
     </div>

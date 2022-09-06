@@ -53,7 +53,7 @@
                     ?>
 
                     <?php query_posts("post_type=post&posts_per_page=5&post_status=publish&paged=$paged"); ?>
-                    <?php $getposts = new WP_query($args);  ?>
+                    <?php $getposts = new WP_query($args); ?>
                     <?php global $wp_query; $wp_query->in_the_loop = true; ?>
                     <?php while ($getposts->have_posts()) : $getposts->the_post(); ?>
 
@@ -65,13 +65,13 @@
                             ?>
                             <?php foreach ($cate as $category): ?>
                             <span class="cat">
-                                <i class="c-dotcat" style="background-color: <?php echo $category->description  ?>"></i>
+                                <i class="c-dotcat" style="background-color: <?php echo $category->description ?>"></i>
                                 <?php echo '<a href="' . get_category_link($category->term_id) . '">' . $category->name . '</a>'; ?>
                             </span>
                             <?php endforeach; ?>
                         </div>
 
-                        <h3 class="titlepost"><a href="<?php the_permalink();?>"> <?php the_title();?> </a></h3>
+                        <h3 class="titlepost"><a href="<?php the_permalink(); ?>"> <?php the_title(); ?> </a></h3>
                     </li>
 
                     <?php endwhile; wp_reset_postdata(); ?>
@@ -112,7 +112,7 @@
                             <?php endforeach; ?>
                         </div>
 
-                        <h3 class="titlepost"><a href="<?php the_permalink();?>"> <?php the_title();?> </a></h3>
+                        <h3 class="titlepost"><a href="<?php the_permalink(); ?>"> <?php the_title(); ?> </a></h3>
                     </li>
 
                     <?php endwhile; wp_reset_postdata(); ?>
