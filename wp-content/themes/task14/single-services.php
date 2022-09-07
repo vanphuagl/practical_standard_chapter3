@@ -96,7 +96,7 @@
                     // next
                     $next_post = get_next_post();
                     if (!empty($next_post)) {
-                        $next_id = $next_post->ID;
+                        $next_id = $next_post->ID; 
                         $permalinkNext = get_permalink($next_id);
                         $getTitleNext = get_the_title($next_id);
                         $getThumbnailNext = get_the_post_thumbnail_url($next_id);
