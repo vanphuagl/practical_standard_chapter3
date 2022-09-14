@@ -311,6 +311,7 @@ Component
 
 .c-btn {
   margin: 0 auto;
+  position: relative;
 }
 
 .c-btn--small {
@@ -1443,4 +1444,39 @@ Utity
 }
 .c-404 .c-btn {
 	margin: 50px auto;
+}
+
+.btn-reset input {
+  cursor: pointer;
+}
+
+.btn-reset:first-child:before {
+  content: unset;
+}
+.c-btn:before {
+  content: "\f105";
+  font-family: "fontAwesome";
+  font-size: 2rem;
+  position: absolute;
+  right: 20px;
+  bottom: 18px;
+  z-index: 99;
+  color: #fff;
+}
+
+.c-btn:hover:before {
+  color: #0078d2;
+}
+
+.mw_wp_form .error {
+  margin: 15px 0 0;
+}
+
+tr:first-child td span {
+  display: unset !important;
+  margin: 0 10px !important;
+}
+
+.is-hidden {
+  display: none;
 }

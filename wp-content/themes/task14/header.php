@@ -18,7 +18,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="<?php bloginfo('template_directory') ?>/assets/css/style.css">
+    <link rel="stylesheet" href="<?php bloginfo('template_directory') ?>/assets/css/style.css?ver=2.1">
     <?php wp_head(); ?>
 </head>
 

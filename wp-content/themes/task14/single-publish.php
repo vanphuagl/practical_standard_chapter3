@@ -10,12 +10,17 @@
     <div class="l-container">
         <div class="p-publish__single">
             <div class="feature_img">
-                <?php the_post_thumbnail(); ?>
+                <?php the_post_thumbnail('', ['class' => 'orbit-image', 'loading' => false]); ?>
             </div>
 
             <div class="p-publish__info">
                 <h2><?php the_title();?></h2>
-                <p class="datepost"><?php echo get_the_date('Y年m月d日'); ?> 発行</p>
+                <?php 
+                    $date_string = get_field('publication_date');
+                    $date = date("Y年m月d日", strtotime($date_string));
+                ?>
+                <p class="datepost"><?php echo $date; ?> 発行</p>
+                <!-- echo get_the_date('Y年m月d日'); -->
 
                 <p class="author">
                     著者  : <?php the_field('author'); ?><br>

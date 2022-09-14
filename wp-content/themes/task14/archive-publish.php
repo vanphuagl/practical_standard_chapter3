@@ -27,7 +27,11 @@
                     </div>
 
                     <div class="c-gridpost__info">
-                        <p class="datepost"><?php echo get_the_date('Y年m月d日'); ?></p>
+                        <?php 
+                            $date_string = get_field('publication_date');
+                            $date = date("Y年m月d日", strtotime($date_string));
+                        ?>
+                        <p class="datepost"><?php echo $date; ?></p>
                         <h3><?php the_title(); ?></h3>
                         <p class="price">¥<?php the_field('price'); ?> (税別)</p>
                         <a href="<?php the_permalink(); ?>" class="c-btnview">詳しく見る</a>

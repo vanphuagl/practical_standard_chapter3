@@ -10,11 +10,10 @@
     <div class="p-news__content">
         <div class="l-container">
             <div class="feature_img">
-                <img src="<?php bloginfo('template_directory'); ?>/assets/img/img_news.png" alt="">
+                <?php the_post_thumbnail(); ?>
             </div>
 
             <div class="c-ttlpostpage">
-                <?php the_post_thumbnail(); ?>
                 <h2><?php the_title(); ?></h2>
                 <span><?php echo get_the_date('Y年m月d日'); ?></span>
 

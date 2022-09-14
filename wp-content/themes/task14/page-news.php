@@ -80,44 +80,6 @@
                         <?php if (function_exists('pagination_bar')) pagination_bar(); ?>
                     </div>
                 </ul>
-
-                <?php foreach($categories as $category): ?>
-                <ul class="c-listpost" id="cat_<?php echo $category->cat_ID ?>">
-                    <?php
-                        $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
-                        $args = array(
-                            "post_type" => 'post',
-                            "post_status" => 'publish',
-                            'posts_per_page'=> 5,       
-                            'paged'=>$paged,
-                            'cat' => $category->cat_ID,
-                        );  
-                    ?>
-
-                    <?php $getposts = new WP_query($args); ?>
-                    <?php global $wp_query; $wp_query->in_the_loop = true; ?>
-                    <?php while ($getposts->have_posts()) : $getposts->the_post(); ?>
-
-                    <li class="c-listpost__item">
-                        <div class="c-listpost__info">
-                            <span class="datepost"><?php echo get_the_date('Y年m月d日'); ?></span>
-                            <?php 
-                                $categories = get_the_category();
-                            ?>
-                            <?php foreach ($categories as $category): ?>
-                            <span class="cat">
-                                <i class="c-dotcat" style="background-color: <?php echo $category->description ?>"></i>
-                                <?php echo '<a href="' . get_category_link($category->term_id) . '">' . $category->name . '</a>'; ?>
-                            </span>
-                            <?php endforeach; ?>
-                        </div>
-
-                        <h3 class="titlepost"><a href="<?php the_permalink(); ?>"> <?php the_title(); ?> </a></h3>
-                    </li>
-
-                    <?php endwhile; wp_reset_postdata(); ?>
-                </ul>
-                <?php endforeach; ?>
             </div>
         </div>
     </div>

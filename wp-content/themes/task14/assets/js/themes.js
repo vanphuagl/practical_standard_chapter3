@@ -27,5 +27,4 @@ $(document).ready(function(){
         $('#'+showContent).fadeIn();
         $('.c-listpost').not('#'+showContent).hide();
     });
-
 });

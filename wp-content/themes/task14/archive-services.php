@@ -79,14 +79,10 @@
 
             </ul>
 
+
             <div class="endcontent">
-                <?php 
-					$images = get_field('choose_img','option');
-					if ($images): ?>
-                    <?php foreach ($images as $image): ?>
-                        <img src="<?php echo esc_url($image['url']);?>" alt="<?php echo esc_attr($image['alt']); ?>" />
-                    <?php endforeach; ?>
-                <?php endif; ?>
+                <img src="<?php bloginfo('template_directory'); ?>/assets/img/img_more05.png" alt="">
+                <img src="<?php bloginfo('template_directory'); ?>/assets/img/img_more06.png" alt="">
             </div>
         </div>
     </div>
